@@ -18,15 +18,20 @@ public class MenuController implements Initializable {
 //        MenuLoaderController menuLoader = new MenuLoaderController();
 //        Pane view = menuLoader.getPage("menuVue1");
 //        mainPane.setCenter(view);
-        new Menu1Controller().startPanel(mainPane);
+        Menu1Controller obj = new Menu1Controller();
+        obj.startPanel(mainPane);
     }
     @FXML
     public void menuButtonTwoAction(ActionEvent actionEvent) {
-        new Menu2Controller().startPanel(mainPane);
+    //    new Menu2Controller().startPanel(mainPane);
+        Menu2Controller obj = new Menu2Controller();
+        obj.startPanel(mainPane);
     }
     @FXML
     public void menuButtonThreeAction(ActionEvent actionEvent) {
-        new Menu3Controller().startPanel(mainPane);
+       // new Menu3Controller().startPanel(mainPane);
+        Menu3Controller obj = new Menu3Controller();
+        obj.startPanel(mainPane);
     }
 
     @Override

@@ -51,11 +51,10 @@ public class Menu1Controller implements Initializable {
         }
 
         // copy data to observableList so it can be pushed to tablePanel
-        for (UserData value : data)
-        {
+        for (UserData value : data) {
+            System.out.println(data);
             observableList.add(value);
         }
-
 
         addressUrl.setCellValueFactory(new PropertyValueFactory<UserData,String>("addressUrl"));
         username.setCellValueFactory(new PropertyValueFactory<UserData,String>("userName"));

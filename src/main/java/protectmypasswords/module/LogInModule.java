@@ -68,7 +68,7 @@ public class LogInModule {
 
                     //  UserData object used to keep inserted data in the correct type
                     List<UserData> firstUserDataList = new LinkedList<UserData>();
-    //                firstUserDataList.add(new UserData("User Registered Date",strDateArr[0],strDateArr[1]));
+                    firstUserDataList.add(new UserData("User Registered Date",strDateArr[0],strDateArr[1]));
 
                     //  UserAccountData object used to be inserted to the file
                     UserAccountData newFileDataMap = new UserAccountData(masterPassword, firstUserDataList);

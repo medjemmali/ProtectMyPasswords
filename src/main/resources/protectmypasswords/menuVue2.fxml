@@ -56,7 +56,7 @@
                                     <Font name="Tahoma" size="18.0" />
                                 </font>
                             </JFXButton>
-                            <Label fx:id="informationMessage" alignment="CENTER" layoutX="278.0" layoutY="259.0" prefHeight="17.0" prefWidth="201.0" textFill="#e48006">
+                            <Label fx:id="informationMessage2" alignment="CENTER" layoutX="278.0" layoutY="259.0" prefHeight="17.0" prefWidth="201.0" textFill="#e48006">
                                 <font>
                                     <Font name="Tahoma Bold" size="12.0" />
                                 </font>

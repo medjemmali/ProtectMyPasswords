@@ -141,13 +141,10 @@ public class JsonModule {
         //not corrected, deserialize will not return an Object
         String data = readFile(fileName);
 
-        System.out.println(data);
-
         data = data.replaceAll("\\\\", "");
         data = data.substring(1,data.length());
       //  data = Jsoner.prettyPrint(data);
 
-        System.out.println(data);
         JsonObject document = (JsonObject)Jsoner.deserialize(data,new JsonObject());
         return document;
 
@@ -178,14 +175,17 @@ public class JsonModule {
         List<UserData> userJsonDataObj = new ArrayList<UserData>();
         JsonArray rest = (JsonArray) currentFile.get(password);
 
+
         //Read the file, insert data to the List
         int id = 0;
-        for(int i =0; i < rest.toArray().length; i++){
+        for(int i =1; i < rest.toArray().length; i++){
             JsonObject test = (JsonObject) rest.get(i);
-            userJsonDataObj.add(new UserData(test.get("url").toString(),
+            userJsonDataObj.add(new UserData(test.get("addressUrl").toString(),
                     test.get("userName").toString(), test.get("password").toString()));
 
         }
+
+        System.out.print("I made it");
 
                     return userJsonDataObj;
         }

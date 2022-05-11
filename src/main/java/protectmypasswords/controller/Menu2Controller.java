@@ -30,7 +30,7 @@ public class Menu2Controller implements Initializable {
     @FXML
     private Button saveButton;
     @FXML
-    private Label informationMessage;
+    private Label informationMessage2;
 
     public void startPanel(BorderPane mainPane){
 
@@ -51,19 +51,17 @@ public class Menu2Controller implements Initializable {
 
 
         if (urlAddressField.getText().isBlank() ) {
-            informationMessage.setText("URL Address is required!");
+            informationMessage2.setText("URL Address is required!");
         } else if(userNameField.getText().isBlank()){
-            informationMessage.setText("UserName is required!");
+            informationMessage2.setText("UserName is required!");
         } else if(masterPasswordField.getText().isBlank()){
-            informationMessage.setText("Password is required!");
+            informationMessage2.setText("Password is required!");
         }else{
             UserData newData = new UserData(urlAddressField.getText(),
                     userNameField.getText(), masterPasswordField.getText());
 
                 if(JsonModule.addNewDataToFile(fileName, masterPassword, newData))
-                    informationMessage.setText("Data Has been saved!");
-                else
-                    informationMessage.setText("Something Not Right");
+                    informationMessage2.setText("Data Has been saved!");
             }
         }
 
