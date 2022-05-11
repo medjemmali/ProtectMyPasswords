@@ -8,4 +8,5 @@ module com.protectmypasswords.module {
     opens protectmypasswords.controller to javafx.fxml;
     exports protectmypasswords.vue;
     opens protectmypasswords.vue to javafx.fxml;
+    opens protectmypasswords.module to javafx.base;
 }

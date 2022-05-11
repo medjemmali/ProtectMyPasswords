@@ -18,7 +18,7 @@
       </ImageView>
       <BorderPane fx:id="mainPane" layoutX="36.0" layoutY="28.0" prefHeight="586.0" prefWidth="1039.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <left>
-            <VBox alignment="CENTER" prefHeight="560.0" prefWidth="223.0" spacing="15.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="560.0" prefWidth="222.0" spacing="15.0" BorderPane.alignment="CENTER">
                <children>
                   <JFXButton onAction="#menuButtonOneAction" style="-fx-background-color: #ff3d00#ff3d00; -fx-background-radius: 90;" text="Passwords">
                      <effect>
@@ -34,7 +34,7 @@
             </VBox>
          </left>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <AnchorPane prefHeight="455.0" prefWidth="577.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </children>

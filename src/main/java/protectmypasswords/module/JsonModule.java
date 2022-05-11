@@ -167,7 +167,7 @@ public class JsonModule {
         return contents;
     }
 
-    public List<UserData> jsonFileToList(String fileName,String password ) throws JsonException {
+    public static List<UserData> jsonFileToList(String fileName, String password) throws JsonException {
 
 
         JsonModule obj = new JsonModule();
@@ -183,6 +183,7 @@ public class JsonModule {
             JsonObject test = (JsonObject) rest.get(i);
             userJsonDataObj.add(new UserData(test.get("url").toString(),
                     test.get("userName").toString(), test.get("password").toString()));
+
         }
 
                     return userJsonDataObj;

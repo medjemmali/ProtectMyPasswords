@@ -19,6 +19,15 @@ public class UserData implements Jsonable, java.io.Serializable{
 
     }
 
+    @Override
+    public String toString() {
+        return "UserData{" +
+                "addressUrl='" + addressUrl + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
     public String getAddressUrl() {
         return addressUrl;
     }
