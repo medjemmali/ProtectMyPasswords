@@ -31,9 +31,10 @@ Button two, add new Password, when its pushed, will allow the user to insert new
 
 ![Screen Shot 2022-05-11 at 6 16 46 PM](https://user-images.githubusercontent.com/98445818/167964137-abe4e8c7-14b9-4574-88a6-2f2a95cd47a6.png)
 
-Button three, Update Master Passwor, when its pushed, will give you a simple menu!
+Button three, Update Master Passwor, when its pushed, will give you a simple menu to change the master password.
+
 [Screen Shot 2022-05-11 at 6 18 55 PM](https://user-images.githubusercontent.com/98445818/167964275-1d9fa464-3b1d-497f-8971-11a5316b4da4.png)
- to change the master password.
+
 
 Coding section: 
 
