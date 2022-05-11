@@ -90,29 +90,4 @@ public class LogInModule {
             return false;
         }
 
-        public  String registerUser(String password){
-/*
-            JSONObject websiteDetails = new JSONObject();
-            websiteDetails.put("URL", "Lokesh");
-
-            JSONObject userObject = new JSONObject();
-            userObject.put(password, userDetails);
-
-            //Add employees to list
-            JSONArray userList = new JSONArray();
-            userList.add(userObject);
-
-            //Write JSON file
-            try (FileWriter file = new FileWriter("userList.json")) {
-                //We can write any JSONArray or JSONObject instance to the file
-                file.write(userList.toJSONString());
-                file.flush();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-*/
-            return "good";
-        }
-
 }

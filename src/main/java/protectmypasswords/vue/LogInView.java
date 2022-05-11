@@ -13,7 +13,7 @@ public class LogInView extends Application {
     public void start(Stage stage) throws IOException {
         URL location = getClass().getResource("/protectmypasswords/login.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
-        Scene scene = new Scene(fxmlLoader.load(), 688, 326);
+        Scene scene = new Scene(fxmlLoader.load(), 688, 255);
         stage.setTitle("Hello!");
         stage.setResizable(false);
         stage.setScene(scene);

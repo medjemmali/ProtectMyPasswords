@@ -1,5 +1,6 @@
 package protectmypasswords.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -18,5 +19,8 @@ public class Menu3Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+
+    public void onLoginButtonClick(ActionEvent actionEvent) {
     }
 }
