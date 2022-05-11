@@ -24,7 +24,6 @@ public class JsonModule {
         JsonObject objToAdd = new UserData("qwe","rttyt","yui").toJsonObj();
    //     List<JsonObject> userJsonDataObj = new ArrayList<JsonObject>();
 
-        obj.addNewDataToFile("File", "Password", objToAdd);
 
         /*
 
@@ -96,18 +95,15 @@ public class JsonModule {
     }
 
 
-    public void addNewDataToFile(String fileName, String password, JsonObject objToAdd) throws IOException, JsonException {
+    public static boolean addNewDataToFile(String fileName, String password, UserData objToAdd) throws JsonException, IOException {
 
-        fileName = "private.bin";
         final JsonModule obj = new JsonModule();
         JsonObject currentFile = obj.readJson(fileName);
 
-        objToAdd = new UserData("qwe","rttyt","yui").toJsonObj();
 
        // Create a list to read the file, and insert data on it
         List<JsonObject> userJsonDataObj = new ArrayList<JsonObject>();
 
-        password = "MyuniquePassword";
         JsonArray rest = (JsonArray) currentFile.get(password);
 
         //Read the file, insert data to the List
@@ -117,18 +113,23 @@ public class JsonModule {
             userJsonDataObj.add(test);
         }
         // add the new Object
-        userJsonDataObj.add(objToAdd);
+        userJsonDataObj.add(objToAdd.toJsonObj());
 
         // Prepare the Map object, and apply serialization and update  the file
         Map<String, List<JsonObject>> myOBJ = new HashMap<>();
         myOBJ.put(password, userJsonDataObj);
 
         String json = Jsoner.serialize(myOBJ);
-        System.out.println(json);
 
+        //insert data to the file
         try (FileWriter fileWriter = new FileWriter(fileName)) {
             Jsoner.serialize(json, fileWriter);
+        }catch(IOException e){
+            e.printStackTrace();
+            System.exit(-1);
         }
+
+        return true;
 
     }
 

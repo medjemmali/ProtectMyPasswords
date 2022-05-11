@@ -1,5 +1,6 @@
 package protectmypasswords.controller;
 
+import com.github.cliftonlabs.json_simple.JsonException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,7 +10,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import protectmypasswords.module.JsonModule;
+import protectmypasswords.module.UserData;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -39,6 +43,28 @@ public class Menu2Controller implements Initializable {
 
     }
 
-    public void onLoginButtonClick(ActionEvent actionEvent) {
-    }
+    public void onLoginButtonClick(ActionEvent actionEvent) throws JsonException, IOException {
+
+        String masterPassword = Singleton.getMasterPassword();
+        String fileName = Singleton.getFilename();
+
+
+
+        if (urlAddressField.getText().isBlank() ) {
+            informationMessage.setText("URL Address is required!");
+        } else if(userNameField.getText().isBlank()){
+            informationMessage.setText("UserName is required!");
+        } else if(masterPasswordField.getText().isBlank()){
+            informationMessage.setText("Password is required!");
+        }else{
+            UserData newData = new UserData(urlAddressField.getText(),
+                    userNameField.getText(), masterPasswordField.getText());
+
+                if(JsonModule.addNewDataToFile(fileName, masterPassword, newData))
+                    informationMessage.setText("Data Has been saved!");
+                else
+                    informationMessage.setText("Something Not Right");
+            }
+        }
+
 }
