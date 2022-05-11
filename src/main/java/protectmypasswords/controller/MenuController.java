@@ -20,7 +20,7 @@ public class MenuController  {
 //    private TableColumn<UserData,String> username ;
 //    @FXML
 //    private TableColumn<UserData,String> password;
-
+@FXML
     // MenuVue2 Variables
     public void menuButtonOneAction(ActionEvent actionEvent) {
         MenuLoaderController menuLoader = new MenuLoaderController();
@@ -28,13 +28,13 @@ public class MenuController  {
         mainPane.setCenter(view);
 
     }
-
+@FXML
     public void menuButtonTwoAction(ActionEvent actionEvent) {
         MenuLoaderController menuLoader = new MenuLoaderController();
         Pane view = menuLoader.getPage("menuVue2");
         mainPane.setCenter(view);
     }
-
+@FXML
     public void menuButtonThreeAction(ActionEvent actionEvent) {
         MenuLoaderController menuLoader = new MenuLoaderController();
         Pane view = menuLoader.getPage("menuVue3");
