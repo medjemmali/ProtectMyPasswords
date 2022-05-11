@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protectmypasswords.controller.Menu3Controller">
+   <children>
+      <BorderPane fx:id="tableview" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="40.0">
+         <center>
+            <AnchorPane prefHeight="283.0" prefWidth="431.0" style="-fx-border-color: #f9484a; -fx-border-radius: 20;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="oldMasterPasswordField" layoutX="53.0" layoutY="33.0" prefHeight="44.0" prefWidth="275.0" promptText="ex : Greatest123...." />
+                  <PasswordField fx:id="newMasterPasswordField" layoutX="55.0" layoutY="105.0" prefHeight="44.0" prefWidth="275.0" promptText="ex : kX9B..." />
+                  <Label layoutX="54.0" layoutY="9.0" prefHeight="20.0" prefWidth="106.0" text="Old Password" textFill="#4d5c5e">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="54.0" layoutY="79.0" prefHeight="20.0" prefWidth="95.0" text="New Password" textFill="#4d5c5e">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="UpdatePasswordButton" layoutX="55.0" layoutY="180.0" onAction="#onLoginButtonClick" prefHeight="25.0" prefWidth="173.0" style="-fx-background-color: #f9484a; -fx-background-radius: 90;" text="Update Password">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Tahoma" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="informationMessage3" alignment="CENTER" layoutX="71.0" layoutY="245.0" prefHeight="35.0" prefWidth="392.0" textFill="#e48006">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

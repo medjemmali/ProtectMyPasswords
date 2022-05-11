@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protectmypasswords.controller.Menu1Controller">
+   <children>
+      <TableView fx:id="tableview" layoutX="10.0" layoutY="7.0" prefHeight="389.0" prefWidth="583.0"  AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+        <columns>
+          <TableColumn fx:id="addressUrl" prefWidth="178.0" text="URL" />
+          <TableColumn fx:id="username" prefWidth="122.0" text="User Name" />
+            <TableColumn fx:id="password" prefWidth="110.0" text="Password" />
+        </columns>
+         <padding>
+            <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+         </padding>
+      </TableView>
+   </children>
+</AnchorPane>
