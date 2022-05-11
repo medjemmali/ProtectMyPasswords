@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="protectmypasswords.controller.MenuController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="602.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protectmypasswords.controller.MenuController">
+   <children>
+      <ImageView fitHeight="602.0" fitWidth="1000.0">
+         <image>
+            <Image url="@security.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="36.0" layoutY="28.0" prefHeight="586.0" prefWidth="1039.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <left>
+            <VBox alignment="CENTER" prefHeight="560.0" prefWidth="223.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton onAction="#menuButtonOneAction" style="-fx-background-color: #ff3d00#ff3d00; -fx-background-radius: 90;" text="Passwords">
+                     <effect>
+                        <InnerShadow choke="0.56" height="145.53" radius="71.525" width="142.57">
+                           <color>
+                              <Color red="0.5180920958518982" green="0.8289473652839661" blue="0.730509877204895" />
+                           </color>
+                        </InnerShadow>
+                     </effect></JFXButton>
+                  <JFXButton onAction="#menuButtonTwoAction" style="-fx-background-color: #ff3d00#ff3d00; -fx-background-radius: 90;" text="Add New Password" />
+                  <JFXButton onAction="#menuButtonThreeAction" style="-fx-background-color: #ff3d00#ff3d00; -fx-background-radius: 90;" text="Update MasterPAssword" />
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
 </AnchorPane>
