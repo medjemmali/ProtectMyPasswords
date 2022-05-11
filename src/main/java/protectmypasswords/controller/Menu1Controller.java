@@ -42,15 +42,15 @@ public class Menu1Controller implements Initializable {
         String masterPassword = Singleton.getMasterPassword();
         String fileName = Singleton.getFilename();
 
+        // Asking for jsonfile data from JsonModule class
         List<UserData>  data;
-//        UserData obj = new UserData( "firtstringOne", "String2", "String3");
         try {
               data =  JsonModule.jsonFileToList(fileName, masterPassword);
         } catch (JsonException e) {
             throw new RuntimeException(e);
         }
 
-
+        // copy data to observableList so it can be pushed to tablePanel
         for (UserData value : data)
         {
             observableList.add(value);
