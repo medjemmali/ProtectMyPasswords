@@ -35,4 +35,16 @@ Button three, Update Master Passwor, when its pushed, will give you a simple men
 [Screen Shot 2022-05-11 at 6 18 55 PM](https://user-images.githubusercontent.com/98445818/167964275-1d9fa464-3b1d-497f-8971-11a5316b4da4.png)
  to change the master password.
 
+Coding section: 
 
+The software has been build using Model–view–controller. 
+All interfaces has been created using Scenebuilder and they are FXML extension. Anyone who copies this project, please be carefule when you change the FXML, dont change FX:id. 
+Jason simple has been used to create Json format file, data is saved on Json format, JsonModule class has all operations, including, saving, reading and updating the file. File is saved as a binary file, and serialized before saved. 
+Master password is encrypted using SHA3-256 Hashing method. The method can be endorsed in the future using salting technique. Here an example :https://www.javaguides.net/2020/02/java-sha-256-hash-with-salt-example.html
+Lambda operation has been used to encrypt the password. Also Inner class is used as well. Check encryptPassword Method. 
+
+The application can be better in the future. I have built it as a practice, and to learn JavaFX, Json, practicing Lambda, File IO, as singleton. 
+
+thank you 
+
+Contact: Jemmalimd@gmail.com
