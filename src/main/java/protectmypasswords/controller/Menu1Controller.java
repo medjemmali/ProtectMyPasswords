@@ -52,7 +52,6 @@ public class Menu1Controller implements Initializable {
 
         // copy data to observableList so it can be pushed to tablePanel
         for (UserData value : data) {
-            System.out.println(data);
             observableList.add(value);
         }
 

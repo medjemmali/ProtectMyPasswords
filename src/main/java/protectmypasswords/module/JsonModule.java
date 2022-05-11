@@ -5,10 +5,10 @@ import com.github.cliftonlabs.json_simple.JsonException;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -107,10 +107,42 @@ public class JsonModule {
 
         }
 
-        System.out.print("I made it");
 
                     return userJsonDataObj;
         }
+        public boolean changeFileName(String oldName, String newName) throws IOException {
+            // Create an object of the File class current file
+            File file = new File("oldName");
 
+            // Replace the file path with path of the directory
+            File rename = new File("newName");
+
+
+            System.out.println("Old File name " + oldName);
+            System.out.println("New File Name " + newName);
+            // store the return value of renameTo() method in
+            // flag
+     //       boolean flag = file.renameTo(rename);
+
+
+     //       File newFile = new File(oldName, newName);
+       //     Files.move(oldName, newFile);
+
+
+            Path yourFile = Paths.get(oldName);
+
+            Files.move(yourFile, yourFile.resolveSibling(newName));
+           // Files.move(oldName, source.resolveSibling("newname"));
+            // if renameTo() return true then if block is
+            // executed
+            if (true == true) {
+
+                System.out.println("File name has changed");
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
 }
 

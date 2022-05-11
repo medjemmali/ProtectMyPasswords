@@ -2,6 +2,7 @@ module com.protectmypasswords.module {
     requires javafx.controls;
     requires javafx.fxml;
     requires json.simple;
+    requires com.jfoenix;
 
 
     exports protectmypasswords.controller;

@@ -14,7 +14,7 @@ public class LogInView extends Application {
         URL location = getClass().getResource("/protectmypasswords/login.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
         Scene scene = new Scene(fxmlLoader.load(), 688, 255);
-        stage.setTitle("Hello!");
+        stage.setTitle("Welcome To ProtectMyPasswords!");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

@@ -17,7 +17,7 @@ public class MenuView {
         Stage menuStage = new Stage();
        // menuStage.initStyle(StageStyle.UNDECORATED);
         menuStage.setResizable(false);
-        menuStage.setTitle("Hello!");
+        menuStage.setTitle("ProtectMyPasswords By Mohamed jemmali");
         menuStage.setScene(scene);
         menuStage.show();
     }
