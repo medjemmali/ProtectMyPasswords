@@ -6,13 +6,15 @@
 About the project Idea: A small app to store passwords: It should ask you for a master password and you should be able to store username and passwords for websites. You should also be able to search passwords by the name of the website. Uses JavaFX, file IO, Json, Collections, java SHA or other encryption for the master password.
 
 Application Menu:
+
 First Menu: 
+
 ![Screen Shot 2022-05-11 at 5 38 40 PM](https://user-images.githubusercontent.com/98445818/167963764-97c1251b-409f-4230-8752-5bdfee8ad10f.png)
 
 
 User can login if he/she already has an account, otherwise, you have to put a password, and hit save. A message will let you know that your account is ready, and you can login. If the password is alredy used, error message will appear. 
 
-Menu Menu: 
+Main Menu: 
 
 ![Screen Shot 2022-05-11 at 6 09 31 PM](https://user-images.githubusercontent.com/98445818/167963903-b9797747-1504-4e0e-8390-f4564aad017e.png)
 
