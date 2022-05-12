@@ -110,7 +110,7 @@ public class JsonModule {
 
                     return userJsonDataObj;
         }
-        public boolean changeFileName(String oldName, String newName) throws IOException {
+        public boolean changeFileName(String oldName, String newName, String oldPassword, String newPassword) throws IOException, JsonException {
             // Create an object of the File class current file
             File file = new File("oldName");
 
@@ -120,29 +120,42 @@ public class JsonModule {
 
             System.out.println("Old File name " + oldName);
             System.out.println("New File Name " + newName);
-            // store the return value of renameTo() method in
-            // flag
-     //       boolean flag = file.renameTo(rename);
-
-
-     //       File newFile = new File(oldName, newName);
-       //     Files.move(oldName, newFile);
 
 
             Path yourFile = Paths.get(oldName);
-
             Files.move(yourFile, yourFile.resolveSibling(newName));
-           // Files.move(oldName, source.resolveSibling("newname"));
-            // if renameTo() return true then if block is
-            // executed
-            if (true == true) {
 
-                System.out.println("File name has changed");
-                return true;
+
+            JsonModule obj = new JsonModule();
+            JsonObject currentFile = obj.readJson(newName);
+
+            // Create a list to read the file, and insert data on it
+            List<JsonObject> userJsonDataObj = new ArrayList<JsonObject>();
+            JsonArray rest = (JsonArray) currentFile.get(oldPassword);
+
+
+            //Read the file, insert data to the List
+            int id = 0;
+            for(int i =0; i < rest.toArray().length; i++){
+                JsonObject test = (JsonObject) rest.get(i);
+                userJsonDataObj.add(test);
             }
-            else {
-                return false;
+
+            // Prepare the Map object, and apply serialization and update  the file
+            Map<String, List<JsonObject>> myOBJ = new HashMap<>();
+            myOBJ.put(newPassword, userJsonDataObj);
+
+            String json = Jsoner.serialize(myOBJ);
+
+            //insert data to the file
+            try (FileWriter fileWriter = new FileWriter(newName)) {
+                Jsoner.serialize(json, fileWriter);
+            }catch(IOException e){
+                e.printStackTrace();
+                System.exit(-1);
             }
+            return true;
+
         }
 }
 

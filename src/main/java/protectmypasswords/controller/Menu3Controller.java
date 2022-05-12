@@ -1,5 +1,6 @@
 package protectmypasswords.controller;
 
+import com.github.cliftonlabs.json_simple.JsonException;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -34,7 +35,7 @@ public class Menu3Controller implements Initializable {
 
     }
 
-    public void onLoginButtonClick(ActionEvent actionEvent) throws NoSuchAlgorithmException, IOException {
+    public void onLoginButtonClick(ActionEvent actionEvent) throws NoSuchAlgorithmException, IOException, JsonException {
 
             // Check if old password is correct
             String oldPassword = oldMasterPasswordField.getText();
@@ -49,7 +50,7 @@ public class Menu3Controller implements Initializable {
             if(Singleton.changeMasterPassword(oldPassword, newPassword)){
 
                 JsonModule objTmp = new JsonModule();
-                if(objTmp.changeFileName(oldFilename, Singleton.getFilename())) {
+                if(objTmp.changeFileName(oldFilename, Singleton.getFilename(),oldPassword, newPassword )) {
                     informationMessage3.setText("Password Has been changed successfully");
                 }else{
                     Singleton.changeMasterPassword(newPassword, oldPassword);
