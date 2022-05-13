@@ -46,6 +46,13 @@ Lambda operation has been used to encrypt the password. Also Inner class is used
 
 The application can be better in the future. I have built it as a practice, and to learn JavaFX, Json, practicing Lambda, File IO, as singleton. 
 
-thank you 
+
+Dependency issues: 
+please refer to the folder https://github.com/medjemmali/ProtectMyPasswords/tree/master/src/main/resources/dependency where you can find all dependency packages. 
+
+To run the application, please use LogInView.java
+
+
+Thank you 
 
 Contact: Jemmalimd@gmail.com
